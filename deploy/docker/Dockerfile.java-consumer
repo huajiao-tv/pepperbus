@@ -1,0 +1,18 @@
+####
+# 编译镜像
+####
+FROM gradle:5.0-jdk8
+
+# 拷贝代码
+COPY ./ /data
+
+# 设置工作目录
+WORKDIR /data/deploy/example/java/pepperbus-demo
+
+# 编译
+USER root
+RUN mkdir -p /data/nginx/logs/java/activity/logs \
+    && touch /data/nginx/logs/java/activity/logs/activity.log \
+    && gradle build --stacktrace
+
+ENTRYPOINT ["java", "-jar", "./build/libs/pepperbus-demo-0.0.1-SNAPSHOT.jar"]

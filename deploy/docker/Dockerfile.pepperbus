@@ -1,0 +1,34 @@
+####
+# 编译镜像
+####
+FROM golang
+
+# 创建代码编译目录
+RUN mkdir -p /go/src/git.huajiao.com/qmessenger/pepperbus
+
+# 设置工作目录
+WORKDIR /go/src/git.huajiao.com/qmessenger/pepperbus
+
+# 拷贝代码
+COPY ./ /go/src/git.huajiao.com/qmessenger/pepperbus
+
+# 编译
+RUN go build
+
+####
+# 运行镜像
+####
+FROM alpine:latest
+
+# 运行库
+RUN mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
+
+# 创建程序目录
+RUN mkdir -p /data/pepperbus && mkdir -p /data/pepperbus/log
+
+# 工作路径
+WORKDIR /data/pepperbus
+
+COPY --from=0 /go/src/git.huajiao.com/qmessenger/pepperbus/pepperbus .
+
+ENTRYPOINT ["./pepperbus"]

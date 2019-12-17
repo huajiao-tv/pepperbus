@@ -1,0 +1,57 @@
+buildscript {
+	ext {
+		springBootVersion = '2.1.0.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+		maven {
+			url "http://nexus.huajiao.qihoo.net/nexus/content/groups/public"
+		}
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.huajiao.pepperbus.demo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+	maven {
+		url "http://nexus.huajiao.qihoo.net/repository/huajiao/"
+	}
+}
+
+configurations {
+	compile.exclude module: "spring-boot-starter-tomcat"
+}
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.projectlombok:lombok:1.18.2')
+	annotationProcessor('org.projectlombok:lombok:1.18.2')
+
+	compile('com.huajiao.common.core:huajiao-common-core:2.2.18')
+	compile fileTree(include: ['*.jar'], dir: '../../../../sdk/java')
+//	compile('com.huajiao.common.client:pepperbus-client:1.0.2')
+
+	compile('com.alibaba:fastjson:1.2.51')
+	compile('org.apache.commons:commons-pool2')
+	compile('commons-codec:commons-codec')
+	compile('commons-io:commons-io:2.6')
+	compile('commons-lang:commons-lang:2.6')
+	compile('com.google.guava:guava:18.0')
+	compile('redis.clients:jedis')
+
+	testCompile("org.springframework.boot:spring-boot-starter-test")
+	testCompile('junit:junit:4.12')
+	testCompile('org.springframework.boot:spring-boot-devtools')
+}
