@@ -206,7 +206,6 @@ func initSetting() error {
 		panic(err)
 	}
 	flog = l
-
 	// 分割 Domain 和 子目录配置
 	var sections []string
 	domainSplit := strings.SplitN(Domain, "/", 2)
@@ -259,9 +258,8 @@ func initSetting() error {
 	if err != nil {
 		return err
 	}
-
 	// 服务发现
-	initDiscovery(DiscoveryAddr, Domain, NodeID)
+	//initDiscovery(DiscoveryAddr, Domain, NodeID)
 	return nil
 }
 

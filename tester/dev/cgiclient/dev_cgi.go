@@ -13,8 +13,8 @@ import (
 
 	"fmt"
 
-	"github.com/CodisLabs/codis/pkg/utils/log"
 	"git.huajiao.com/qmessenger/pepperbus/codec/fastcgi"
+	"github.com/CodisLabs/codis/pkg/utils/log"
 )
 
 const (
