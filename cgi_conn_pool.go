@@ -8,7 +8,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"git.huajiao.com/qmessenger/pepperbus/codec/fastcgi"
+	"github.com/huajiao-tv/pepperbus/codec/fastcgi"
 	"github.com/johntech-o/idgen"
 )
 

@@ -2,19 +2,19 @@ package main
 
 import (
 	"context"
+	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/url"
+	"strings"
 	"sync"
 	"sync/atomic"
 	"time"
-	"encoding/json"
-	"fmt"
-	"strings"
 
-	"git.huajiao.com/qmessenger/pepperbus/define"
 	"github.com/CodisLabs/codis/pkg/utils/errors"
-	"git.huajiao.com/qmessenger/pepperbus/utility"
+	"github.com/huajiao-tv/pepperbus/define"
+	"github.com/huajiao-tv/pepperbus/utility"
 )
 
 // 包含调用连接池、发送http请求、解析返回结果

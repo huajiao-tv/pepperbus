@@ -1,8 +1,8 @@
 # Redeo
 
-[![GoDoc](https://godoc.org/git.huajiao.com/qmessenger/redeo?status.svg)](https://godoc.org/git.huajiao.com/qmessenger/redeo)
+[![GoDoc](https://godoc.org/github.com/huajiao-tv/redeo?status.svg)](https://godoc.org/github.com/huajiao-tv/redeo)
 [![Build Status](https://travis-ci.org/bsm/redeo.png?branch=master)](https://travis-ci.org/bsm/redeo)
-[![Go Report Card](https://goreportcard.com/badge/git.huajiao.com/qmessenger/redeo)](https://goreportcard.com/report/git.huajiao.com/qmessenger/redeo)
+[![Go Report Card](https://goreportcard.com/badge/github.com/huajiao-tv/redeo)](https://goreportcard.com/report/github.com/huajiao-tv/redeo)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 The high-performance Swiss Army Knife for building redis-protocol compatible servers/services.
@@ -20,7 +20,7 @@ This repository is organised into multiple components:
 * [client](./client/) contains a minimalist pooled client.
 
 For full documentation and examples, please see the individual packages and the
-official API documentation: https://godoc.org/git.huajiao.com/qmessenger/redeo.
+official API documentation: https://godoc.org/github.com/huajiao-tv/redeo.
 
 ## Examples
 
@@ -32,7 +32,7 @@ package main
 import (
   "net"
 
-  "git.huajiao.com/qmessenger/redeo"
+  "github.com/huajiao-tv/redeo"
 )
 
 func main() {{ "ExampleServer" | code }}

@@ -20,5 +20,5 @@ dashboard-ui是pepper_bus的后台管理页面
 1. 测试环境数据库在花椒测试机
 
 ### 服务搭建
-1. go build -o ./bin/dashboard  git.huajiao.com/qmessenger/pepperbus/dashboard
+1. go build -o ./bin/dashboard  github.com/huajiao-tv/pepperbus/dashboard
 2. ./bin/dashboard

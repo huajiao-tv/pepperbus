@@ -2,8 +2,8 @@
 // @require server sdk
 require_once(dirname(dirname(dirname(dirname(__FILE__)))).'/sdk/php/server.php');
 $treeServer = new PepperBusServer();
-$treeServer->register("queue1/default", "ProcessJob", "ExecuteSuccess");
-// $treeServer->register("queue1/topic2", "ProcessJob", "ExecuteFail");
+$treeServer->register("queue1/topic1", "ProcessJob", "ExecuteSuccess");
+$treeServer->register("queue1/topic2", "ProcessJob", "ExecuteFail");
 
 $treeServer->parseRequest();
 if ($treeServer->request->isQueueRequest()) {
@@ -32,15 +32,14 @@ class ProcessJob
     public function ExecuteSuccess($request)
     {
         $jobs = $request->getJobs();
-        file_put_contents("/tmp/1.log", "ok");
-//         var_dump($jobs);
+        //var_dump($jobs);
         return 0;
     }
 
     public function ExecuteFail($request)
     {
         $jobs = $request->getJobs();
-//         var_dump($jobs);
+        //var_dump($jobs);
         throw new Exception(self::MY_ERROR_MSG, self::MY_ERROR_CODE);
         return;
     }

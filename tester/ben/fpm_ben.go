@@ -6,7 +6,7 @@ import (
 	"net/url"
 	"time"
 
-	"git.huajiao.com/qmessenger/pepperbus/codec/fastcgi"
+	"github.com/huajiao-tv/pepperbus/codec/fastcgi"
 )
 
 const (

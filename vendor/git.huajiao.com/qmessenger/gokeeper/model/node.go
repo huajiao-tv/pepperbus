@@ -16,7 +16,7 @@ func init() {
 type NodeStatus int
 
 const (
-	PkgPrefix     string     = "git.huajiao.com/qmessenger/gokeeper/model."
+	PkgPrefix     string     = "github.com/qmessenger/gokeeper/model."
 	StatusStop    NodeStatus = 0
 	StatusRunning NodeStatus = 1
 

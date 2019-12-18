@@ -11,7 +11,7 @@ import (
 	"sync"
 	"time"
 
-	"git.huajiao.com/qmessenger/redeo/info"
+	"github.com/huajiao-tv/redeo/info"
 )
 
 // CommandDescription describes supported commands

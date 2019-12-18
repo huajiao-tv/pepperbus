@@ -87,7 +87,7 @@ func main() {
 		NumOfWorkers:   5,
 		CgiConfigKey:   "local",
 		ScriptEntry:    "/data/example/php/consume.php",
-		// ScriptEntry: "/Users/specode/go/src/git.huajiao.com/qmessenger/pepperbus/example/php/consume.php",
+		// ScriptEntry: "/Users/specode/go/src/github.com/huajiao-tv/pepperbus/example/php/consume.php",
 	}
 
 	topic2Config := &TopicConfig{

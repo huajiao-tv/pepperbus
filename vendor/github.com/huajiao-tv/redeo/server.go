@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"git.huajiao.com/qmessenger/redeo/resp"
+	"github.com/huajiao-tv/redeo/resp"
 )
 
 // Server configuration

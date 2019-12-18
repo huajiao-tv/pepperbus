@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strings"
 
-	"git.huajiao.com/qmessenger/redeo/resp"
+	"github.com/huajiao-tv/redeo/resp"
 )
 
 // UnknownCommand returns an unknown command error string

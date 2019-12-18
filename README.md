@@ -39,7 +39,7 @@ pepperbus
 - 克隆代码仓库
 
 ```bash
-$ git clone https://git.huajiao.com/qmessenger/pepperbus.git
+$ git clone https://github.com/huajiao-tv/pepperbus.git
 $ git clone https://github.com/qmessenger/job-dashboard.git 
 #用户管理页面
 ```

@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/huajiao-tv/pepperbus/utility"
 	"github.com/johntech-o/idgen"
-	"git.huajiao.com/qmessenger/pepperbus/utility"
 )
 
 var ServiceId string

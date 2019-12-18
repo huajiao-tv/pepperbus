@@ -4,8 +4,8 @@ import (
 	"net"
 	"time"
 
-	"git.huajiao.com/qmessenger/redeo"
-	"git.huajiao.com/qmessenger/redeo/resp"
+	"github.com/huajiao-tv/redeo"
+	"github.com/huajiao-tv/redeo/resp"
 
 	//"github.com/qmessenger/utility/msgRedis"
 	"strings"

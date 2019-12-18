@@ -7,19 +7,19 @@ import (
 	"fmt"
 
 	"github.com/CodisLabs/codis/pkg/utils/errors"
-	"git.huajiao.com/qmessenger/redeo/resp"
+	"github.com/huajiao-tv/redeo/resp"
 )
 
 type Job struct {
-	Id        string `json:"id"`
-	InTraceId string `json:"inTraceId"`
-	Content   string `json:"content"`
-	Retry     int    `json:"retrying"`
-	RetryTimes int	`json："retry_times"`		//重试次数
-	RetryTime int64	`json："retry_time"`		//重试时间（执行时间）
-	IsRetry bool			`json："is_retry"`		//是否需要重试
-	BeginRetry bool 		`json："begin_retry"` 	//标记是否已经进入重试机制
-	RetryResidueTime int64 		`json："retry_residue_time"` 	//剩余重试时间
+	Id               string `json:"id"`
+	InTraceId        string `json:"inTraceId"`
+	Content          string `json:"content"`
+	Retry            int    `json:"retrying"`
+	RetryTimes       int    `json："retry_times"`        //重试次数
+	RetryTime        int64  `json："retry_time"`         //重试时间（执行时间）
+	IsRetry          bool   `json："is_retry"`           //是否需要重试
+	BeginRetry       bool   `json："begin_retry"`        //标记是否已经进入重试机制
+	RetryResidueTime int64  `json："retry_residue_time"` //剩余重试时间
 }
 
 func (j Job) String() string {

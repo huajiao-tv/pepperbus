@@ -18,7 +18,7 @@ class PepperBusClient
 {
     private static $QUEUE_CONF = [
         "queue1" => [
-            "host" => "127.0.0.1", "port" => 12018, "timeout" => 3, "password" => "783ab0ce"
+            "host" => "127.0.0.1", "port" => 12017, "timeout" => 3, "password" => "783ab0ce"
         ],
     ];
 

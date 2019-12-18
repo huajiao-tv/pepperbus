@@ -11,7 +11,7 @@ services:
             context: .
             dockerfile: ./docker/Dockerfile.php-consumer
         volumes:
-            - "${PWD}/../../pepperbus:/data/"
+            - "${PWD}/../../pepperbus/deploy/data:/data/"
     golang-worker:
         container_name: pepperbus_http-worker
         build:
@@ -58,24 +58,24 @@ services:
         command: ["--character-set-server=utf8mb4","--collation-server=utf8mb4_unicode_ci"]
         ports:
             - "3306:3306"
-    # dashboard-api:
-    #     container_name: pepperbus_dashboard_api
-    #     build:
-    #         context: ../../job-dashboard/dashboard/
-    #         dockerfile: ./deploy/docker/Dockerfile.dashboard-api
-    #     ports:
-    #         - "12336:12335"
-    #     depends_on:
-    #         - gokeeper
-    #         - mysql
-    #         - pepperbus
-    #     command: ["-p",":12335","-a","admin","-s","root:@tcp(mysql:3306)/pepper_bus_admin?charset=utf8&parseTime=True&loc=Local","-e","debug","-d","pepperbus_docker","-k","pepperbus_gokeeper:17000"]
-    # dashboard-ui:
-    #     container_name: pepperbus_dashboard_ui
-    #     build:
-    #         context: ../../job-dashboard/dashboard-ui
-    #         dockerfile: ./deploy/docker/Dockerfile.dashboard-ui
-    #     ports:
-    #         - "9528:9528"
-    #     volumes:
-    #         - "${PWD}/../../job-dashboard/dashboard-ui/:/dashboard-ui"
+    dashboard-api:
+        container_name: pepperbus_dashboard_api
+        build:
+            context: ../../job-dashboard/dashboard/
+            dockerfile: ./deploy/docker/Dockerfile.dashboard-api
+        ports:
+            - "12336:12335"
+        depends_on:
+            - gokeeper
+            - mysql
+            - pepperbus
+        command: ["-p",":12335","-a","admin","-s","root:@tcp(mysql:3306)/pepper_bus_admin?charset=utf8&parseTime=True&loc=Local","-e","debug","-d","pepperbus_docker","-k","pepperbus_gokeeper:17000"]
+    dashboard-ui:
+        container_name: pepperbus_dashboard_ui
+        build:
+            context: ../../job-dashboard/dashboard-ui
+            dockerfile: ./deploy/docker/Dockerfile.dashboard-ui
+        ports:
+            - "9528:9528"
+        volumes:
+            - "${PWD}/../../job-dashboard/dashboard-ui/:/dashboard-ui"

@@ -13,7 +13,7 @@ import (
   "fmt"
   "strings"
 
-  "git.huajiao.com/qmessenger/redeo/resp"
+  "github.com/huajiao-tv/redeo/resp"
 )
 
 func main() {
@@ -46,7 +46,7 @@ import (
   "bytes"
   "fmt"
 
-  "git.huajiao.com/qmessenger/redeo/resp"
+  "github.com/huajiao-tv/redeo/resp"
 )
 
 func main() {
@@ -90,7 +90,7 @@ import (
   "fmt"
   "net"
 
-  "git.huajiao.com/qmessenger/redeo/resp"
+  "github.com/huajiao-tv/redeo/resp"
 )
 
 func main() {

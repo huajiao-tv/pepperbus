@@ -4,13 +4,13 @@
 FROM golang:1.12
 
 # 创建代码编译目录
-RUN mkdir -p /go/src/git.huajiao.com/qmessenger/pepperbus
+RUN mkdir -p /go/src/github.com/huajiao-tv/pepperbus
 
 # 设置工作目录
-WORKDIR /go/src/git.huajiao.com/qmessenger/pepperbus
+WORKDIR /go/src/github.com/huajiao-tv/pepperbus
 
 # 拷贝代码
-COPY ./ /go/src/git.huajiao.com/qmessenger/pepperbus
+COPY ./ /go/src/github.com/huajiao-tv/pepperbus
 
 # 编译
 RUN go build
@@ -32,7 +32,7 @@ RUN mkdir -p /data/pepperbus/log
 # 工作路径
 WORKDIR /data/pepperbus
 
-COPY --from=0 /go/src/git.huajiao.com/qmessenger/pepperbus/pepperbus .
+COPY --from=0 /go/src/github.com/huajiao-tv/pepperbus/pepperbus .
 
 ENV CLUSTER bus_test
 ENV KEEPER 127.0.0.1

@@ -11,11 +11,10 @@ import (
 	"io/ioutil"
 	"net/url"
 
-
 	"strings"
 
 	"github.com/CodisLabs/codis/pkg/utils/log"
-	"git.huajiao.com/qmessenger/pepperbus/sdk/golang"
+	"github.com/huajiao-tv/pepperbus/sdk/golang"
 )
 
 var (

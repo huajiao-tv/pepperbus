@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"git.huajiao.com/qmessenger/pepperbus/codec/fastcgi"
+	"github.com/huajiao-tv/pepperbus/codec/fastcgi"
 	"github.com/qmessenger/utility/msgRedis"
 )
 

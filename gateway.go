@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"git.huajiao.com/qmessenger/redeo"
-	"git.huajiao.com/qmessenger/redeo/resp"
 	"github.com/CodisLabs/codis/pkg/utils/errors"
+	"github.com/huajiao-tv/redeo"
+	"github.com/huajiao-tv/redeo/resp"
 )
 
 type Gateway struct {

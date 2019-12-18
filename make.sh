@@ -46,8 +46,8 @@ function runFuncTest() {
 
 function localFuncTestInit() {
 	CURDIR=`pwd`
-	if [ $CURDIR != `pwd $GOPATH"/src/git.huajiao.com/qmessenger/pepperbus"` ];then
-		echo "make.sh funcTest local must run in "$GOPATH"/src/git.huajiao.com/qmessenger/pepperbus"
+	if [ $CURDIR != `pwd $GOPATH"/src/github.com/huajiao-tv/pepperbus"` ];then
+		echo "make.sh funcTest local must run in "$GOPATH"/src/github.com/huajiao-tv/pepperbus"
 		exit
 	fi
 
@@ -92,8 +92,8 @@ function localFuncTestInit() {
 	localFuncTestClean "do not exit"
 
 	# 本地启动
-	sudo cp $GOPATH"/src/git.huajiao.com/qmessenger/pepperbus/tester/funcTest/consume.php" $TEST_PHP_FPM_WORK_PATH 
-	sudo cp -r $GOPATH"/src/git.huajiao.com/qmessenger/pepperbus/sdk" $TEST_PHP_FPM_WORK_PATH 
+	sudo cp $GOPATH"/src/github.com/huajiao-tv/pepperbus/tester/funcTest/consume.php" $TEST_PHP_FPM_WORK_PATH
+	sudo cp -r $GOPATH"/src/github.com/huajiao-tv/pepperbus/sdk" $TEST_PHP_FPM_WORK_PATH
 	sudo chmod 777 $TEST_PHP_FPM_WORK_PATH"consume.php"
 	sudo $TEST_PHP_FPM_PATH -y $TEST_PHP_FPM_CONF_PATH -D
 	sudo $TEST_REDIS_SERVER_PATH $TEST_REDIS_SERVER_CONF_PATH & 2>&1 > /dev/null
@@ -162,7 +162,7 @@ case $1 in
 		export GOBIN=$CURDIR"/bin/"
 		echo $GOPATH
 		echo $GOBIN
-		go install git.huajiao.com/qmessenger/pepperbus/tester/ben 
+		go install github.com/huajiao-tv/pepperbus/tester/ben
 		GOPATH=$OLD_GOPATH
 		GOBIN=$OLD_GOBIN
 
@@ -209,8 +209,8 @@ case $1 in
 		echo $GOBIN
 		mkdir -p $GOBIN
 		go build -o $GOBIN/pepperbus
-		go install git.huajiao.com/qmessenger/pepperbus/tester/funcTest 
-		cp $GOPATH"/src/git.huajiao.com/qmessenger/pepperbus/tester/funcTest/remote_exec.sh" $GOBIN
+		go install github.com/huajiao-tv/pepperbus/tester/funcTest
+		cp $GOPATH"/src/github.com/huajiao-tv/pepperbus/tester/funcTest/remote_exec.sh" $GOBIN
 		# 清除日志
 		sudo rm bin/log/*log* -f
 

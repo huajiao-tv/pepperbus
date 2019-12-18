@@ -6,7 +6,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"git.huajiao.com/qmessenger/redeo/resp"
+	"github.com/huajiao-tv/redeo/resp"
 )
 
 var (

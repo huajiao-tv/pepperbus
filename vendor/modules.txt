@@ -6,10 +6,6 @@ git.huajiao.com/qmessenger/gokeeper/model
 git.huajiao.com/qmessenger/gokeeper/model/discovery
 git.huajiao.com/qmessenger/gokeeper/model/parser
 git.huajiao.com/qmessenger/gokeeper/pb/go
-# git.huajiao.com/qmessenger/redeo v0.0.0-20191125071423-4e0f3aff1c56
-git.huajiao.com/qmessenger/redeo
-git.huajiao.com/qmessenger/redeo/info
-git.huajiao.com/qmessenger/redeo/resp
 # github.com/CodisLabs/codis v0.0.0-20181104082235-de1ad026e329
 github.com/CodisLabs/codis/pkg/utils/assert
 github.com/CodisLabs/codis/pkg/utils/errors
@@ -40,6 +36,10 @@ github.com/golang/protobuf/ptypes/empty
 github.com/golang/protobuf/ptypes/timestamp
 # github.com/gorilla/schema v1.1.0
 github.com/gorilla/schema
+# github.com/huajiao-tv/redeo v0.0.0-20191218071855-3eacfd3c0d98
+github.com/huajiao-tv/redeo
+github.com/huajiao-tv/redeo/info
+github.com/huajiao-tv/redeo/resp
 # github.com/johntech-o/gorpc v0.0.0-20190508161658-a63b4699b194
 github.com/johntech-o/gorpc
 # github.com/johntech-o/grace v0.0.0-20180817022522-f3a929c26b08

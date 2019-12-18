@@ -4,9 +4,6 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
-		maven {
-			url "http://nexus.huajiao.qihoo.net/nexus/content/groups/public"
-		}
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -25,9 +22,6 @@ sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
-	maven {
-		url "http://nexus.huajiao.qihoo.net/repository/huajiao/"
-	}
 }
 
 configurations {

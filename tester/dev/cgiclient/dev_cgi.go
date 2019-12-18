@@ -14,7 +14,7 @@ import (
 	"fmt"
 
 	"github.com/CodisLabs/codis/pkg/utils/log"
-	"git.huajiao.com/qmessenger/pepperbus/codec/fastcgi"
+	"github.com/huajiao-tv/pepperbus/codec/fastcgi"
 )
 
 const (
@@ -91,7 +91,7 @@ func (jobs *Jobs) Encode() []byte {
 func main() {
 	flag.StringVar(&TimeOutSecond, "t", "5s", "timeout duration")
 	flag.StringVar(&address, "h", "127.0.0.1:9001", "cgi address")
-	flag.StringVar(&scriptFile, "f", "/Users/johntech/code/gocode/src/git.huajiao.com/qmessenger/pepperbus/example/php/consume.php", "cgi script file")
+	flag.StringVar(&scriptFile, "f", "/Users/johntech/code/gocode/src/github.com/huajiao-tv/pepperbus/example/php/consume.php", "cgi script file")
 	flag.StringVar(&queueTopic, "qt", "queue1/topic1", "queue name and topic name")
 	flag.Parse()
 

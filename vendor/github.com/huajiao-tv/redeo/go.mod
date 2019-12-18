@@ -1,4 +1,4 @@
-module git.huajiao.com/qmessenger/redeo
+module github.com/huajiao-tv/redeo
 
 go 1.13
 

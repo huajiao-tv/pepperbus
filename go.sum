@@ -3,8 +3,6 @@ git.huajiao.com/qmessenger/gokeeper v1.0.1-0.20191126064510-648d9cf41742 h1:67kV
 git.huajiao.com/qmessenger/gokeeper v1.0.1-0.20191126064510-648d9cf41742/go.mod h1:UiR1DBzuddGo0xcOmfGdJfNjt66QXC8FGXdeDS+EH8w=
 git.huajiao.com/qmessenger/gokeeper v1.0.1-0.20191128070106-1f5117fd22c7 h1:LS/xRf1sEkNkh+24beEKofaWqQONHZuUjJwVoNLJLWk=
 git.huajiao.com/qmessenger/gokeeper v1.0.1-0.20191128070106-1f5117fd22c7/go.mod h1:UiR1DBzuddGo0xcOmfGdJfNjt66QXC8FGXdeDS+EH8w=
-git.huajiao.com/qmessenger/redeo v0.0.0-20191125071423-4e0f3aff1c56 h1:FRyfponw3kfwyAd6HmQE1xrm0vWWx0BujV1dYIfyWmo=
-git.huajiao.com/qmessenger/redeo v0.0.0-20191125071423-4e0f3aff1c56/go.mod h1:Axf7pOkMeskxYJDk1OkWrr7CouUBksq//RIW/p++Ws8=
 github.com/BurntSushi/toml v0.3.1 h1:WXkYYl6Yr3qBf1K79EBnL4mak0OimBfB0XUf9Vl28OQ=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/CodisLabs/codis v0.0.0-20181104082235-de1ad026e329 h1:KyRmPlfd2xewxb54vIBPNILFyCh2R3zNDwLZURDxT0E=
@@ -88,6 +86,10 @@ github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0/go.mod h1:8NvIoxWQoOIhqOTXgf
 github.com/grpc-ecosystem/grpc-gateway v1.9.5/go.mod h1:vNeuVxBJEsws4ogUvrchl83t/GYV9WGTSLVdBhOQFDY=
 github.com/hpcloud/tail v1.0.0 h1:nfCOvKYfkgYP8hkirhJocXT2+zOD8yUNjXaWfTlyFKI=
 github.com/hpcloud/tail v1.0.0/go.mod h1:ab1qPbhIpdTxEkNHXyeSf5vhxWSCs/tWer42PpOxQnU=
+github.com/huajiao-tv/redeo v0.0.0-20191125071423-4e0f3aff1c56 h1:FRyfponw3kfwyAd6HmQE1xrm0vWWx0BujV1dYIfyWmo=
+github.com/huajiao-tv/redeo v0.0.0-20191125071423-4e0f3aff1c56/go.mod h1:Axf7pOkMeskxYJDk1OkWrr7CouUBksq//RIW/p++Ws8=
+github.com/huajiao-tv/redeo v0.0.0-20191218071855-3eacfd3c0d98 h1:O8MuIlj2aGfh+bq1hSeHbPlUFRW7hHkxjkc0n0E7ar4=
+github.com/huajiao-tv/redeo v0.0.0-20191218071855-3eacfd3c0d98/go.mod h1:LkCs9ePQm/dSf2hXQ1X6nvNdYmDR0DP6aRLs23yIGWs=
 github.com/inconshreveable/mousetrap v1.0.0/go.mod h1:PxqpIevigyE2G7u3NXJIT2ANytuPF1OarO4DADm73n8=
 github.com/johntech-o/gorpc v0.0.0-20190508161658-a63b4699b194 h1:bvaTWS2Cxbm36MlXCn4cpFQ1rhW85TvpwhZaO6fYuUs=
 github.com/johntech-o/gorpc v0.0.0-20190508161658-a63b4699b194/go.mod h1:TNsWGQP9gh9uwg00gstF7/xJXhwcBFefUHUw9da2Khc=

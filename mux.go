@@ -9,8 +9,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"git.huajiao.com/qmessenger/pepperbus/define"
-	"git.huajiao.com/qmessenger/pepperbus/utility"
+	"github.com/huajiao-tv/pepperbus/define"
+	"github.com/huajiao-tv/pepperbus/utility"
 )
 
 type QueueTyp int
