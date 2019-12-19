@@ -4,6 +4,8 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
+		maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -22,6 +24,8 @@ sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+	maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
 }
 
 configurations {
@@ -33,9 +37,7 @@ dependencies {
 	compile('org.projectlombok:lombok:1.18.2')
 	annotationProcessor('org.projectlombok:lombok:1.18.2')
 
-	compile('com.huajiao.common.core:huajiao-common-core:2.2.18')
 	compile fileTree(include: ['*.jar'], dir: '../../../../sdk/java')
-//	compile('com.huajiao.common.client:pepperbus-client:1.0.2')
 
 	compile('com.alibaba:fastjson:1.2.51')
 	compile('org.apache.commons:commons-pool2')

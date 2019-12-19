@@ -12,6 +12,9 @@ WORKDIR /go/src/github.com/huajiao-tv/pepperbus
 # 拷贝代码
 COPY ./ /go/src/github.com/huajiao-tv/pepperbus
 
+ENV GO111MODULE off
+RUN git config --global --add url."git@git.huajiao.com:".insteadOf "https://git.huajiao.com/"
+
 # 编译
 RUN go build
 
