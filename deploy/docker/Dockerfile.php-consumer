@@ -3,6 +3,11 @@ FROM php:7.2-fpm
 RUN pecl install redis-4.0.1 \
 	&& docker-php-ext-enable redis
 
+# 基础命令
+RUN apt-get update && apt-get install -y procps \
+    && apt-get install -y net-tools && apt-get install -y iproute2 && apt-get install -y telnet \
+    && apt-get install -y vim
+
 COPY ./etc/php-fpm.conf /usr/local/etc/php-fpm.conf
 
 WORKDIR /data

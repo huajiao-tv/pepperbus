@@ -11,7 +11,7 @@ services:
             context: .
             dockerfile: ./docker/Dockerfile.php-consumer
         volumes:
-            - "${PWD}/../../pepperbus/deploy/data:/data/"
+            - "${PWD}/../../pepperbus:/data/"
     golang-worker:
         container_name: pepperbus_http-worker
         build:
@@ -25,15 +25,15 @@ services:
             context: ../
             dockerfile: ./deploy/docker/Dockerfile.java-consumer
         ports:
-            - "18081:8080"
+            - "18081:18081"
     pepperbus:
         container_name: pepperbus_main
         build:
             context: ../
             dockerfile: ./deploy/docker/Dockerfile.pepperbus
         ports:
-            - "12018:12017"
-            - "19841:19840"
+            - "12017:12017"
+            - "19840:19840"
         depends_on:
             - gokeeper
             - redis
@@ -43,10 +43,10 @@ services:
         command: ["-n", "pepperbus_main:19840", "-d", "pepperbus_docker", "-k", "pepperbus_gokeeper:7000"]
     gokeeper:
         container_name: pepperbus_gokeeper
-        image: huajiao/gokeeper:v1.0.0
+        image: registry.huajiao.com/library/gokeeper:latest
         ports:
-            - "7001:7000"
-            - "17001:17000"
+            - "7000:7000"
+            - "17000:17000"
         volumes:
             - "${PWD}/../../pepperbus/deploy/etc/gokeeper/:/data/keeper/etc/"
     mysql:
@@ -58,24 +58,24 @@ services:
         command: ["--character-set-server=utf8mb4","--collation-server=utf8mb4_unicode_ci"]
         ports:
             - "3306:3306"
-    dashboard-api:
-        container_name: pepperbus_dashboard_api
-        build:
-            context: ../../job-dashboard/dashboard/
-            dockerfile: ./deploy/docker/Dockerfile.dashboard-api
-        ports:
-            - "12336:12335"
-        depends_on:
-            - gokeeper
-            - mysql
-            - pepperbus
-        command: ["-p",":12335","-a","admin","-s","root:@tcp(mysql:3306)/pepper_bus_admin?charset=utf8&parseTime=True&loc=Local","-e","debug","-d","pepperbus_docker","-k","pepperbus_gokeeper:17000"]
-    dashboard-ui:
-        container_name: pepperbus_dashboard_ui
-        build:
-            context: ../../job-dashboard/dashboard-ui
-            dockerfile: ./deploy/docker/Dockerfile.dashboard-ui
-        ports:
-            - "9528:9528"
-        volumes:
-            - "${PWD}/../../job-dashboard/dashboard-ui/:/dashboard-ui"
+#    dashboard-api:
+#        container_name: pepperbus_dashboard_api
+#        build:
+#            context: ../../job-dashboard/dashboard/
+#            dockerfile: ./deploy/docker/Dockerfile.dashboard-api
+#        ports:
+#            - "12336:12335"
+#        depends_on:
+#            - gokeeper
+#            - mysql
+#            - pepperbus
+#        command: ["-p",":12335","-a","admin","-s","root:@tcp(mysql:3306)/pepper_bus_admin?charset=utf8&parseTime=True&loc=Local","-e","debug","-d","pepperbus_docker","-k","pepperbus_gokeeper:17000"]
+#    dashboard-ui:
+#        container_name: pepperbus_dashboard_ui
+#        build:
+#            context: ../../job-dashboard/dashboard-ui
+#            dockerfile: ./deploy/docker/Dockerfile.dashboard-ui
+#        ports:
+#            - "9528:9528"
+#        volumes:
+#            - "${PWD}/../../job-dashboard/dashboard-ui/:/dashboard-ui"

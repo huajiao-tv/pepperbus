@@ -2,7 +2,7 @@
 // @require server sdk
 require_once(dirname(dirname(dirname(dirname(__FILE__)))).'/sdk/php/server.php');
 $treeServer = new PepperBusServer();
-$treeServer->register("queue1/topic1", "ProcessJob", "ExecuteSuccess");
+$treeServer->register("queue1/default", "ProcessJob", "ExecuteSuccess");
 $treeServer->register("queue1/topic2", "ProcessJob", "ExecuteFail");
 
 $treeServer->parseRequest();
