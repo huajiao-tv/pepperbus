@@ -4,11 +4,11 @@
 
 ## 基础环境搭建（操作系统:linux）
 
-1 安装 librrd: sudo apt install librrd-dev // 此处需要修改
+1 安装 librrd: sudo apt install librrd-dev // todo此处需要修改
 
 2 安装 pepper_bus: go get github.com/huajiao-tv/pepperbus
 
-3 安装运行 go_keeper: env GIT_TERMINAL_PROMPT=1 go get github.com/huajiao-tv/pepperbus
+3 安装运行 go_keeper: env GIT_TERMINAL_PROMPT=1 go get github.com/huajiao-tv/gokeeper
 
 ``` 
 - 用 pepper_bus 下的 keeper.conf 替换/usr/local 下 gokeeper 的 keeper.conf
@@ -24,9 +24,10 @@
 ```
 
 4 安装运行 php_fpm
-
+```
 - 用 pepper_bus 你的 php-fpm.conf 替换原有的配置 cp /{your_qbus_project}/src/github.com/huajiao-tv/pepperbus/etc/php-fpm.conf /etc/php/7.0/fpm/php-fpm.conf
 - 重启 php-fpm sudo service php7.0-fpm restart
+```
 
 5 安装运行 redis
 ```
@@ -54,7 +55,7 @@
 
 2 运行一次
 ```
-- **添加文件的 demo:** /服务器路径/src/github.com/huajiao-tv/pepperbus/example/php/product.php
+- **添加文件的 demo:** /{your_qbus_project}/src/github.com/huajiao-tv/pepperbus/example/php/produce.php
 - **确认加入队列成功:** 018/07/18 11:35:43 mux.go:229: [LOG] AddJobs success: queue1/topic1: inTraceId: 1453608781088024576 retrying: false jobs [{"id":1453608781088024577,"inTraceId":145360878108802
 - **mux 读取 job 成功:** mux GetJobsFromQueue success: queue1/topic2: outTraceId: 1453608782291789825 retrying: false jobs [{"id":1453608781088024577,"inTraceId":1453608781088024576,"content":"conntent from produce","retrying":0}]
 - **mux 分发给 php-fpm 失败:** cgi connect to fail: dial tcp: missing address
