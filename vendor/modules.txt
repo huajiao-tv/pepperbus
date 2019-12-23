@@ -28,7 +28,7 @@ github.com/golang/protobuf/ptypes/empty
 github.com/golang/protobuf/ptypes/timestamp
 # github.com/gorilla/schema v1.1.0
 github.com/gorilla/schema
-# github.com/huajiao-tv/gokeeper v0.0.0-20191220092434-d6e6ebe3db06
+# github.com/huajiao-tv/gokeeper v0.0.0-20191223025226-84408a7be89c
 github.com/huajiao-tv/gokeeper/client
 github.com/huajiao-tv/gokeeper/client/discovery
 github.com/huajiao-tv/gokeeper/client/schedule

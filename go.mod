@@ -16,7 +16,7 @@ require (
 	github.com/facebookgo/subset v0.0.0-20150612182917-8dac2c3c4870 // indirect
 	github.com/go-ole/go-ole v1.2.4 // indirect
 	github.com/gorilla/schema v1.1.0
-	github.com/huajiao-tv/gokeeper v0.0.0-20191220092434-d6e6ebe3db06
+	github.com/huajiao-tv/gokeeper v0.0.0-20191223025226-84408a7be89c
 	github.com/huajiao-tv/redeo v0.0.0-20191218071855-3eacfd3c0d98
 	github.com/johntech-o/grace v0.0.0-20180817022522-f3a929c26b08
 	github.com/johntech-o/idgen v0.0.0-20180806115547-83270e39db14

@@ -71,6 +71,8 @@ github.com/grpc-ecosystem/grpc-gateway v1.9.5/go.mod h1:vNeuVxBJEsws4ogUvrchl83t
 github.com/hpcloud/tail v1.0.0/go.mod h1:ab1qPbhIpdTxEkNHXyeSf5vhxWSCs/tWer42PpOxQnU=
 github.com/huajiao-tv/gokeeper v0.0.0-20191220092434-d6e6ebe3db06 h1:IzbzRXj0p6vyFJ2o1RvbA7Pzey5kmIdGV33zzcn+VFg=
 github.com/huajiao-tv/gokeeper v0.0.0-20191220092434-d6e6ebe3db06/go.mod h1:zTMf/1en34x3L2c0UyLUWn+r4biHnlCSsXPTKtT2vwA=
+github.com/huajiao-tv/gokeeper v0.0.0-20191223025226-84408a7be89c h1:HMZERtvXFom2UzKlUGDf00uBmOhifME4ePn91DNkQfY=
+github.com/huajiao-tv/gokeeper v0.0.0-20191223025226-84408a7be89c/go.mod h1:zTMf/1en34x3L2c0UyLUWn+r4biHnlCSsXPTKtT2vwA=
 github.com/huajiao-tv/gokeeper v1.0.0 h1:JCRsiiAtAbmQRtj5wcGaGUbuBBCH2VdHX5638Ql7kcE=
 github.com/huajiao-tv/gokeeper v1.0.0/go.mod h1:DJXLwAUgJj8neX3nqkt/zLinxM3Zdmi4Yxe2kYDZiMY=
 github.com/huajiao-tv/redeo v0.0.0-20191218071855-3eacfd3c0d98 h1:O8MuIlj2aGfh+bq1hSeHbPlUFRW7hHkxjkc0n0E7ar4=

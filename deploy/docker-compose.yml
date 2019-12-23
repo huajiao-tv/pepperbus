@@ -26,29 +26,40 @@ services:
             dockerfile: ./deploy/docker/Dockerfile.java-consumer
         ports:
             - "18081:18081"
-    # pepperbus:
-    #     container_name: pepperbus_main
-    #     build:
-    #         context: ../
-    #         dockerfile: ./deploy/docker/Dockerfile.pepperbus
-    #     ports:
-    #         - "12017:12017"
-    #         - "19840:19840"
-    #     depends_on:
-    #         - gokeeper
-    #         - redis
-    #         - php-fpm
-    #         - golang-worker
-    #         - java-worker
-    #     command: ["-n", "pepperbus_main:19840", "-d", "pepperbus_docker", "-k", "pepperbus_gokeeper:7000"]
-    # gokeeper:
-    #     container_name: pepperbus_gokeeper
-    #     image: registry.huajiao.com/library/gokeeper:latest
-    #     ports:
-    #         - "7000:7000"
-    #         - "17000:17000"
-    #     volumes:
-    #         - "${PWD}/../../pepperbus/deploy/etc/gokeeper/:/data/keeper/etc/"
+    pepperbus:
+        container_name: pepperbus_main
+        build:
+            context: ../
+            dockerfile: ./deploy/docker/Dockerfile.pepperbus
+        ports:
+            - "12017:12017"
+            - "19840:19840"
+        depends_on:
+            - gokeeper
+            - redis
+            - php-fpm
+            - golang-worker
+            - java-worker
+        command: ["-n", "pepperbus_main:19840", "-d", "pepperbus_demo", "-k", "pepperbus_gokeeper:7000", "-kd", "pepperbus_gokeeper:7001"]
+    gokeeper:
+        container_name: pepperbus_gokeeper
+        image: docker_compose_gokeeper_main # 该镜像在gokeeper项目 docker-compose中生成的
+        ports:
+            - "7000:7000"
+            - "7001:7001"
+            - "17000:17000"
+            - "17001:17001"
+        depends_on:
+            - gokeeper_etcd
+    gokeeper_etcd:
+        container_name: gokeeper_etcd
+        image: 'bitnami/etcd:latest'
+        environment:
+            - ALLOW_NONE_AUTHENTICATION=yes
+            - ETCD_ADVERTISE_CLIENT_URLS=http://127.0.0.1:2379
+        ports:
+            - '2379:2379'
+            - '2380:2380'
     mysql:
         image: mysql:5.7
         restart: always

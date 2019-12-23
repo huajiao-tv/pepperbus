@@ -9,7 +9,6 @@ import (
 )
 
 func init() {
-	fmt.Println("NodeInfo{}", NodeInfo{})
 	gob.Register(NodeInfo{})
 	gob.Register(Node{})
 }
@@ -51,7 +50,6 @@ func NewNodeInfo(ID, hostname, keeperAddr, domain, component string, rawSubscrip
 		RawSubscription: rawSubscription,
 		ComponentTags:   tag,
 	}
-	fmt.Println("info {}", info)
 	return info
 }
 
@@ -149,7 +147,6 @@ func NewNode(nodeInfo NodeInfo) *Node {
 		NodeInfo: NewNodeInfo(nodeInfo.ID, nodeInfo.Hostname, nodeInfo.KeeperAddr, nodeInfo.Domain, nodeInfo.Component, nodeInfo.RawSubscription, nodeInfo.ComponentTags),
 		Event:    make(chan Event, eventChanSize),
 	}
-	fmt.Println("node {}", node)
 	return node
 }
 

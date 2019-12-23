@@ -230,14 +230,12 @@ func initSetting() error {
 	if err := keeperCli.Work(); err != nil {
 		return err
 	}
-
 	// CGI 连接池初始化
 	cgiConfs, err := parseCgiTransportConfig()
 	if err != nil {
 		return err
 	}
 	CgiPoolManager.Init(cgiConfs)
-
 	// CGI 错误收集
 	errorCollectionConfig, err := parseErrorCollection()
 	if err != nil {
@@ -259,7 +257,7 @@ func initSetting() error {
 		return err
 	}
 	// 服务发现
-	//initDiscovery(DiscoveryAddr, Domain, NodeID)
+	initDiscovery(DiscoveryAddr, Domain, NodeID)
 	return nil
 }
 
@@ -365,7 +363,6 @@ func parseTaskDebug() (*StorageConfig, error) {
 	if netQueueConf().TaskDebugStorage == "" {
 		return config, nil
 	}
-
 	err := json.Unmarshal([]byte(netQueueConf().TaskDebugStorage), &config)
 	if err != nil {
 		flog.Error("task debug config init failed", err.Error())
