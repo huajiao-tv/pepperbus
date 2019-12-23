@@ -11,9 +11,9 @@ import (
 	"syscall"
 	"time"
 
-	gokeeper "git.huajiao.com/qmessenger/gokeeper/client"
-	"git.huajiao.com/qmessenger/gokeeper/client/discovery"
 	"github.com/davecgh/go-spew/spew"
+	gokeeper "github.com/huajiao-tv/gokeeper/client"
+	"github.com/huajiao-tv/gokeeper/client/discovery"
 	"github.com/huajiao-tv/pepperbus/logic/data"
 	"github.com/johntech-o/idgen"
 	"github.com/qmessenger/utility/logger"
