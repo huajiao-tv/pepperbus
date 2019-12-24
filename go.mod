@@ -21,6 +21,5 @@ require (
 	github.com/johntech-o/grace v0.0.0-20180817022522-f3a929c26b08
 	github.com/johntech-o/idgen v0.0.0-20180806115547-83270e39db14
 	github.com/prometheus/client_golang v1.0.0
-	github.com/qmessenger/utility v0.0.0-20190605100313-a7399a75433a
 	github.com/shirou/gopsutil v2.19.10+incompatible
 )

@@ -27,8 +27,8 @@ func bench_test_cgi(gn, n int) {
 		vs.Add("IS_PEPPER_BUS_REQUEST", "true")
 
 		env := make(map[string]string)
-		//env["SCRIPT_FILENAME"] = "/data/example/php/consume.php"
-		env["SCRIPT_FILENAME"] = "/data/log/test.php"
+		env["SCRIPT_FILENAME"] = "/data/example/php/consume.php"
+		//env["SCRIPT_FILENAME"] = "/data/log/test.php"
 		timeout := time.Duration(3000000000)
 
 		go func(goid, runnum int) {

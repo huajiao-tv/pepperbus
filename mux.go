@@ -172,6 +172,9 @@ func (m *Mux) Serve() {
 		}()
 	}
 
+	if len(conf) == 0 || conf[m.queue].Topic[m.topic] == nil {
+		return
+	}
 	// 不需要重试时，不需要进入循环判断
 	if !conf[m.queue].Topic[m.topic].IsRetry {
 		select {

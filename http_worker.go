@@ -199,6 +199,10 @@ func (hw *HttpWorker) Serve() {
 			}
 		}()
 	}
+	// 容错
+	if len(conf) == 0 || conf[hw.queue].Topic[hw.topic] == nil {
+		return
+	}
 
 	// 不需要重试时，不需要进入循环判断
 	if !conf[hw.queue].Topic[hw.topic].IsRetry {

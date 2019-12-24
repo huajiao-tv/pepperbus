@@ -90,8 +90,8 @@ func (ts *TestStorage) CleanQueue(qn QueueName, tn TopicName, typ QueueTyp) (int
 	return 1, nil
 }
 
-func (ts *TestStorage) GetLength(qn QueueName, tn TopicName) (int64, int64, error) {
-	return 1, 1, nil
+func (ts *TestStorage) GetLength(qn QueueName, tn TopicName) (int64, int64, int64, error) {
+	return 1, 1, 1, nil
 }
 
 // test proc
@@ -99,6 +99,7 @@ var testMux = NewMux(testContext, "TestQueue", "TestTopic", &TestSuccessRemote{}
 
 func TestMuxServerRun(t *testing.T) {
 	// todo, have not find an available method for test running go proc, so just test the code is running as normal
+	t.Logf("testMux = %v\n", testMux)
 	testMux.Serve()
 	t.Log("no bad news is good news")
 }

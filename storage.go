@@ -124,9 +124,8 @@ func (s *storage) GetLength(qn QueueName, tn TopicName) (normal int64, retry int
 	}
 	retryKey := GetKey(qn, tn, RetryQueue)
 	retry, err = s.redisCli.Call(s.address).LLEN(retryKey)
-
 	timeoutKey := GetKey(qn, tn, TimeoutQueue)
-	timeout, err = s.redisCli.Call(s.address).LLEN(timeoutKey)
+	timeout, _ = s.redisCli.Call(s.address).LLEN(timeoutKey)
 	return
 }
 

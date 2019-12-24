@@ -62,6 +62,7 @@ func init() {
 		redisClients = make(map[int]*msgRedis.Pool)
 		for i := 0; i < benTestQueueCount; i++ {
 			auth := fmt.Sprintf("%s%d:%s", queueNamePrefix, i, benTestPasspord)
+			fmt.Printf("gatewayAddr=%v \t auth=%v\n", gatewayAddr, auth)
 			redisClients[i] = msgRedis.NewPool(gatewayAddr, auth, 300, 20, 20)
 		}
 	}

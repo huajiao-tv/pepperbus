@@ -284,27 +284,27 @@ func TestRetryQueueErrorCase(t *testing.T) {
 }
 
 func TestGetLength(t *testing.T) {
-	res, res1, err := testStorage.GetLength("TestQueue", "TestTopic")
+	res, res1, timeout, err := testStorage.GetLength("TestQueue", "TestTopic")
 	if err == nil && res == COMMON_QUEUE_LEN && res1 == RETRY_QUEUE_LEN {
-		t.Log(res, res1, err)
+		t.Log(res, res1, timeout, err)
 	} else {
 		t.Fatalf("GetLengthCommon Case want err = nil and res = %d returns, but receive err = %v, res = %v, res1 = %v", COMMON_QUEUE_LEN, err, res, res1)
 	}
 }
 
 func TestGetLengthCommonError(t *testing.T) {
-	res, res1, err := testStorage.GetLength("CommonErrorQueue", "TestTopic")
+	res, res1, timeout, err := testStorage.GetLength("CommonErrorQueue", "TestTopic")
 	if err != nil {
-		t.Log(res, res1, err)
+		t.Log(res, res1, timeout, err)
 	} else {
 		t.Fatalf("GetLengthCommon Error Case want err != nil returns, but receive err = %v, res = %v, res1 = %v", err, res, res1)
 	}
 }
 
 func TestGetLengthRetryError(t *testing.T) {
-	res, res1, err := testStorage.GetLength("RetryErrorQueue", "TestTopic")
+	res, res1, timeout, err := testStorage.GetLength("RetryErrorQueue", "TestTopic")
 	if err != nil && res == COMMON_QUEUE_LEN {
-		t.Log(res, res1, err)
+		t.Log(res, res1, timeout, err)
 	} else {
 		t.Fatalf("GetLengthRetry Error Case want err != nil and res = %d returns, but receive err = %v, res = %v, res1 = %v", COMMON_QUEUE_LEN, err, res, res1)
 	}

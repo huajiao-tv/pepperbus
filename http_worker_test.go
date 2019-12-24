@@ -161,7 +161,7 @@ func TestHttpSendPingFailed(t *testing.T) {
 func TestHttpPingTopicNotRegisted(t *testing.T) {
 	httpMux.RemoteSender = &TestTopicNotRegistedRemote{}
 	err := httpMux.SendPing()
-	if err != nil && err.Error() == "topic no register: TestQueue/TestTopic" {
+	if err != nil && err.Error() == "topic no register: TestQueue/TestTopic response is [Queue/TopicNotRegisted]" {
 		t.Log(err)
 	} else {
 		t.Fatalf("SendPing Case want err = 'topic no register: TestQueue/TestTopic' returns, but receive err = %v", err)
