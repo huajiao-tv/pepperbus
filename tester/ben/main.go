@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/huajiao-tv/pepperbus/codec/fastcgi"
-	"github.com/qmessenger/utility/msgRedis"
+	"github.com/huajiao-tv/pepperbus/utility/msgRedis"
 )
 
 var (

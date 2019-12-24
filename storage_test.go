@@ -7,7 +7,7 @@ import (
 	"github.com/huajiao-tv/redeo"
 	"github.com/huajiao-tv/redeo/resp"
 
-	//"github.com/qmessenger/utility/msgRedis"
+	//"github.com/huajiao-tv/pepperbus/utility/msgRedis"
 	"strings"
 	"testing"
 )

@@ -66,9 +66,9 @@ github.com/prometheus/common/model
 # github.com/prometheus/procfs v0.0.2
 github.com/prometheus/procfs
 github.com/prometheus/procfs/internal/fs
-# github.com/qmessenger/utility v0.0.0-20190605100313-a7399a75433a
-github.com/qmessenger/utility/logger
-github.com/qmessenger/utility/msgRedis
+# github.com/huajiao-tv/pepperbus/utility v0.0.0-20190605100313-a7399a75433a
+github.com/huajiao-tv/pepperbus/utility/logger
+github.com/huajiao-tv/pepperbus/utility/msgRedis
 # github.com/satori/go.uuid v1.2.0
 github.com/satori/go.uuid
 # github.com/shirou/gopsutil v2.19.10+incompatible

@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/qmessenger/utility/msgRedis"
+	"github.com/huajiao-tv/pepperbus/utility/msgRedis"
 )
 
 func main() {

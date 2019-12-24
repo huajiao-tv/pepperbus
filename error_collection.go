@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/qmessenger/utility/msgRedis"
+	"github.com/huajiao-tv/pepperbus/utility/msgRedis"
 )
 
 const (
@@ -69,7 +69,6 @@ func (ec *ErrorCollection) AddError(queue QueueName, topic TopicName,
 
 	respBody = fmt.Sprintf("%s ------ [Host] %s", tmp, hostname)
 
-
 	var errorInfo string
 	if errMsg != nil {
 		errorInfo = fmt.Sprintf("%v,,,,%s,,,,%s,,,,%s,,,,%s,,,,%s", time.Now().Unix(), jobs, respCode, respErrorCode, respBody, errMsg)
@@ -94,7 +93,7 @@ func (ec *ErrorCollection) GetError(queue QueueName, topic TopicName, length int
 	key := fmt.Sprintf(ErrorCollectionKeyFMT, queue, topic)
 	tmp, err := ec.redisCli.Call(ec.address).LRANGE(key, 0, length-1)
 	if err != nil {
-		flog.Error("redisCli GetError Failed ",ec.address, err)
+		flog.Error("redisCli GetError Failed ", ec.address, err)
 		return nil
 	}
 

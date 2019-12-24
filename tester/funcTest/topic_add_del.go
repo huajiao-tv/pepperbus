@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/qmessenger/utility/msgRedis"
+	"github.com/huajiao-tv/pepperbus/utility/msgRedis"
 )
 
 const gokeeperUpdateUrl = "http://10.143.168.10:17000/conf/manage"

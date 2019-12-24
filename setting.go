@@ -15,8 +15,8 @@ import (
 	gokeeper "github.com/huajiao-tv/gokeeper/client"
 	"github.com/huajiao-tv/gokeeper/client/discovery"
 	"github.com/huajiao-tv/pepperbus/logic/data"
+	"github.com/huajiao-tv/pepperbus/utility/logger"
 	"github.com/johntech-o/idgen"
-	"github.com/qmessenger/utility/logger"
 )
 
 func init() {

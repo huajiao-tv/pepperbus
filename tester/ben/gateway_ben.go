@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/qmessenger/utility/msgRedis"
+	"github.com/huajiao-tv/pepperbus/utility/msgRedis"
 )
 
 type testResult struct {

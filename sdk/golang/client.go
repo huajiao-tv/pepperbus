@@ -2,7 +2,7 @@ package busworker
 
 import (
 	"encoding/json"
-	"github.com/qmessenger/utility/msgRedis"
+	"github.com/huajiao-tv/pepperbus/utility/msgRedis"
 )
 
 type Client struct {
@@ -24,9 +24,9 @@ func NewClient(addr string) *Client {
 }
 
 // add jobs to specified queue
-func (c *Client) AddJobs(queue string,password string, contents ...interface{}) error {
+func (c *Client) AddJobs(queue string, password string, contents ...interface{}) error {
 	var (
-		key  = queue +"/default"
+		key  = queue + "/default"
 		data = make([]string, 0, len(contents))
 	)
 
@@ -42,14 +42,14 @@ func (c *Client) AddJobs(queue string,password string, contents ...interface{}) 
 			return err
 		}
 	}
-	if err := c.Auth(queue,password);err !=nil{
+	if err := c.Auth(queue, password); err != nil {
 		return err
 	}
-	_,err := c.Call(c.addr).LPUSH(key, data)
+	_, err := c.Call(c.addr).LPUSH(key, data)
 	return err
 }
-func (c *Client) Auth(queue string,password string) error {
-	args := queue+":"+password
+func (c *Client) Auth(queue string, password string) error {
+	args := queue + ":" + password
 	_, err := c.Call(c.addr).AUTH(args)
 	return err
 }
