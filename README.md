@@ -1,3 +1,11 @@
+<p align="center">
+    <a href="https://hub.docker.com/r/huajiao/pepperbus" alt="Activity">
+        <img src="https://img.shields.io/docker/cloud/automated/huajiao/pepperbus.svg" /></a>
+    <a href="https://hub.docker.com/r/huajiao/pepperbus" alt="Activity">
+        <img src="https://img.shields.io/docker/cloud/build/huajiao/pepperbus.svg" /></a>
+</p>
+
+
 # pepperbus
 
 
