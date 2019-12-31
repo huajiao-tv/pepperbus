@@ -393,18 +393,6 @@ func ServiceHandler(w http.ResponseWriter, r *http.Request) {
 	service := &ServiceController{response: w, request: r}
 	controller := reflect.ValueOf(service)
 
-	// IP check
-	reqIP := strings.Split(r.RemoteAddr, ":")[0]
-	switch action {
-	case "Recover", "CleanStatistics", "CleanFailedJobs", "SendToCgi", "ManageService":
-		if !isAllowedIP(reqIP) {
-			flog.Debug("Admin IP Limit Access denied", reqIP, action)
-			method := controller.MethodByName("HelloWorldAction")
-			method.Call([]reflect.Value{})
-			return
-		}
-	}
-
 	method := controller.MethodByName(action + "Action")
 	if !method.IsValid() {
 		method = controller.MethodByName("HelloWorldAction")
