@@ -1,7 +1,7 @@
 ####
 # 编译镜像
 ####
-FROM golang:1.12
+FROM golang
 
 # 创建代码编译目录
 RUN mkdir -p /go/src/github.com/huajiao-tv/pepperbus
